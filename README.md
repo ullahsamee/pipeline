@@ -1,6 +1,6 @@
 # CD20 Protein Binder Design Pipeline
 
-A computational pipeline for designing novel protein binders targeting CD20 using deep learning and molecular simulation approaches.
+A computational pipeline for designing novel protein binders targeting CD20 using deep learning and molecular simulation approaches. Developed for the BioML Challenge 2024: Bits to Binders competition.
 
 ## Overview
 
@@ -12,6 +12,17 @@ This project implements a computational approach for designing protein binders t
 - **Rosetta** for energy calculations and structural refinement
 - **OpenMM** for molecular dynamics simulations
 - **Prodigy** for binding affinity prediction
+
+## Competition Context
+
+This pipeline was developed for the BioML Challenge 2024: Bits to Binders competition organized by the University of Texas at Austin BioML Society. The competition required teams to:
+
+- Design the antigen binding domain of a Chimeric Antigen Receptor (CAR) targeting CD20
+- Adhere to an 80 amino acid length constraint (due to DNA synthesis limitations)
+- Create designs that would activate CAR-T cell killing and proliferation responses
+- Submit sequences for experimental testing by LEAH Laboratories
+
+Our designs are currently in the testing stage with results expected in early 2025.
 
 ## Project Structure
 
@@ -122,6 +133,8 @@ Multiple design strategies were explored:
 
 The pipeline generated a collection of high-affinity protein binders specifically targeting the extracellular region of CD20, with strong predicted binding affinity, structural stability, and specificity for the target epitope while minimizing interaction with the cell membrane.
 
+Our designs have been submitted to the BioML Challenge and are currently being experimentally tested alongside approximately 12,000 other designs from participating teams. Results are expected in early 2025.
+
 ## Advanced Configuration
 
 ### RFDiffusion Parameters
@@ -165,6 +178,14 @@ sampling_temp = 0.1
   - Eastman, P., Swails, J., Chodera, J.D., et al. (2017). OpenMM 7: Rapid development of high performance algorithms for molecular dynamics. PLOS Computational Biology, 13(7), e1005659. https://doi.org/10.1371/journal.pcbi.1005659
   - Vangone, A., & Bonvin, A.M.J.J. (2015). Contacts-based prediction of binding affinity in protein–protein complexes. eLife, 4, e07454. https://doi.org/10.7554/eLife.07454
   - Xue, L.C., Rodrigues, J.P., Kastritis, P.L., Bonvin, A.M.J.J., & Vangone, A. (2016). PRODIGY: a web server for predicting the binding affinity of protein–protein complexes. Bioinformatics, 32(23), 3676–3678. https://doi.org/10.1093/bioinformatics/btw514
+
+## Team
+
+- Karl Philip Lundquist
+- Abel Gurung
+- Amardeep Singh
+- Arjun Singh
+- Dion Whitehead
 
 ## License
 

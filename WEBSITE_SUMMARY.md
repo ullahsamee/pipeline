@@ -1,11 +1,15 @@
-# CD20 Protein Binder Design
+# CD20 Protein Binder Design for the BioML Challenge 2024
 
 ## Summary
-Development of a computational pipeline to design novel protein binders targeting CD20 using RFDiffusion, ProteinMPNN, and AlphaFold2.
+Participation in the BioML Challenge 2024: Bits to Binders competition, where we developed a computational pipeline to design novel protein binders targeting CD20 using RFDiffusion, ProteinMPNN, and AlphaFold2.
 
 ## Project Overview
 
-In this project, we developed a comprehensive computational pipeline to design novel protein binders specifically targeting CD20, a membrane protein found on B cells and a key target for various immunotherapies. This work demonstrates the application of cutting-edge deep learning approaches and molecular simulation techniques to create functional proteins with potential therapeutic applications.
+This project was our team's submission to the BioML Challenge 2024: Bits to Binders competition organized by the University of Texas at Austin BioML Society. In a 5-week timeframe, we developed a comprehensive computational pipeline to design novel protein binders specifically targeting CD20, a membrane protein found on B cells and a key target for various immunotherapies. 
+
+The competition challenged teams to design the antigen binding domain of a Chimeric Antigen Receptor (CAR) that would engage with CD20, with a strict constraint of 80 amino acids maximum length. Successful designs would activate a CAR-T cell killing and proliferation response, with all submissions being experimentally tested by LEAH Laboratories using their pooled CAR-T screening platform.
+
+This work demonstrates the application of cutting-edge deep learning approaches and molecular simulation techniques to create functional proteins with potential therapeutic applications under real-world constraints.
 
 ## The Challenge
 
@@ -27,11 +31,13 @@ Assessing binding stability emerged as one of the most nuanced aspects of our pr
 
 Our process evolved into a multi-round design strategy that balanced exploration and exploitation. We carried forward the top-performing designs through progressive iterations while continuously generating new variants to maintain diversity. Designs meeting our criteria for energy thresholds and RMSD advanced through rounds, each iteration improving stability and affinity. This iterative approach allowed us to effectively navigate the vast protein design space, systematically improving our binders' qualities while maintaining a computationally feasible search.
 
-## Results and Impact
+## Results and Competition Status
 
-Our computational design process yielded a collection of high-affinity protein binders specifically targeting the extracellular region of CD20. These final designs demonstrated strong predicted binding affinity, structural stability, and specificity for the target epitope while minimizing interaction with the cell membrane.
+Our computational design process yielded a collection of high-affinity protein binders specifically targeting the extracellular region of CD20. These final designs demonstrated strong predicted binding affinity, structural stability, and specificity for the target epitope while minimizing interaction with the cell membrane, all while meeting the competition's 80 amino acid length constraint.
 
-The methodology we developed has broader implications beyond CD20. It provides a framework that could be adapted to design binders for other disease-relevant proteins, potentially leading to new therapeutic candidates for conditions where targeted protein binding is beneficial.
+Our designs have been submitted to the competition and are currently being tested by LEAH Laboratories. According to the competition organizers, approximately 12,000 proteins from all participating teams are being experimentally evaluated, with results expected in early 2025. The top three teams will be invited to present their methods based on how well their predicted designs bind to CD20, signal through a CAR, and activate a CAR-T cell proliferation and killing response.
+
+The methodology we developed for this competition has broader implications beyond CD20. It provides a framework that could be adapted to design binders for other disease-relevant proteins, potentially leading to new therapeutic candidates for conditions where targeted protein binding is beneficial.
 
 ## Key Technologies
 
@@ -49,10 +55,20 @@ The methodology we developed has broader implications beyond CD20. It provides a
 
 [GitHub Repository](https://github.com/klundquist/cd20-binder-design)
 
-## Team
+## Team and Competition Details
 
+**Team Members:**
 - Karl Philip Lundquist
 - Abel Gurung
 - Amardeep Singh
 - Arjun Singh
 - Dion Whitehead
+
+**Competition:**
+- **Event**: BioML Challenge 2024: Bits to Binders
+- **Organizer**: University of Texas at Austin BioML Society
+- **Design Phase**: August-September 2024 (5 weeks)
+- **Target**: CD20 (B-cell surface protein)
+- **Constraint**: 80 amino acids maximum length
+- **Testing**: In progress by LEAH Laboratories
+- **Results Expected**: Early 2025

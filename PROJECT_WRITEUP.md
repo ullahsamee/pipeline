@@ -2,9 +2,13 @@
 
 ## Project Overview
 
-This project implements a computational pipeline for designing novel protein binders targeting CD20, a B-cell surface protein crucial for immunotherapies. By combining cutting-edge deep learning models with molecular simulation techniques, we've created a systematic approach to developing protein binders with high specificity and binding affinity.
+This project was developed for the BioML Challenge 2024: Bits to Binders competition organized by the University of Texas at Austin BioML Society. The challenge tasked teams with designing protein sequences that could effectively bind to a cancer antigen target (CD20) within a 5-week timeframe. 
 
-The project demonstrates the application of recent advances in protein structure prediction and design to create functional proteins with potential therapeutic applications. This repository contains the complete codebase for this pipeline, organized for clarity and reproducibility.
+Our team created a computational pipeline for designing novel protein binders targeting CD20, a B-cell surface protein crucial for immunotherapies. By combining cutting-edge deep learning models with molecular simulation techniques, we developed a systematic approach to creating protein binders with high specificity and binding affinity.
+
+The competition required designed proteins to be constrained to 80 amino acids (due to DNA synthesis limitations) and focused on creating the antigen binding domain of a Chimeric Antigen Receptor (CAR) that would engage with CD20. Successful designs would activate a CAR-T cell killing and proliferation response, resulting in a quantifiable increase in functional binders.
+
+This repository contains our complete codebase, organized for clarity and reproducibility, as required by the competition's open-source mandate.
 
 ## Technical Approach
 
@@ -96,7 +100,7 @@ This project showcases proficiency in:
 - **Scientific Software Engineering**: Pipeline development, containerization, orchestration
 - **Data Analysis**: Custom metrics, filtering algorithms, and evaluation protocols
 
-## Results and Impact
+## Results and Competition Status
 
 Our pipeline successfully generated a diverse set of potential CD20 binders with the following characteristics:
 
@@ -104,8 +108,11 @@ Our pipeline successfully generated a diverse set of potential CD20 binders with
 - Structural stability and proper folding
 - Specificity for the target epitope
 - Compatibility with membrane topology constraints
+- Conformity to the 80 amino acid length constraint
 
-The methodology has broader applications beyond CD20, providing a framework for designing binders for other therapeutically relevant proteins. The approach demonstrates how computational methods can accelerate the discovery of potential therapeutic proteins, reducing the need for extensive experimental screening.
+Our team submitted these designed sequences to the BioML Challenge competition, where they are currently in the testing stage. LEAH Laboratories is conducting experimental validation using their pooled CAR-T screening platform to evaluate how well our designs bind to CD20, signal through a CAR, and activate CAR-T cell proliferation and killing responses. According to competition updates, approximately 12,000 proteins from all teams are being tested, with results expected in early 2025.
+
+The methodology developed for this competition has broader applications beyond CD20, providing a framework for designing binders for other therapeutically relevant proteins. Our approach demonstrates how computational methods can accelerate the discovery of potential therapeutic proteins, reducing the need for extensive experimental screening.
 
 ## Future Directions
 
@@ -135,6 +142,18 @@ Several technical enhancements could further improve this pipeline:
 - **Molecular Modeling**: Rosetta, OpenMM, MDAnalysis
 - **Containerization**: Docker
 - **Visualization**: PyMOL, Jupyter notebooks
+
+## Competition Participation
+
+**Event**: BioML Challenge 2024: Bits to Binders  
+**Organizer**: University of Texas at Austin BioML Society  
+**Timeline**: August-September 2024 (5-week design phase)  
+**Target**: CD20 (announced at competition kickoff)  
+**Constraint**: 80 amino acids maximum length  
+**Evaluation**: LEAH Laboratories' pooled CAR-T screening platform  
+**Results**: Testing in progress, expected early 2025  
+
+Our team's participation in this competition showcases our ability to rapidly develop and implement a sophisticated computational pipeline under real-world constraints and time pressure. The challenge provided valuable experience in applying cutting-edge AI methods to protein design for therapeutic applications.
 
 ## References
 
