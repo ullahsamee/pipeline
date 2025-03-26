@@ -1,0 +1,64 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using these metadata."
+title: "CD20 Protein Binder Design Pipeline"
+abstract: "A computational pipeline for designing novel protein binders targeting CD20 using deep learning and molecular simulation approaches."
+authors:
+  - family-names: "Lundquist"
+    given-names: "Karl Philip"
+    orcid: "https://orcid.org/0000-0000-0000-0000"  # Replace with your actual ORCID if available
+  - family-names: "Gurung"
+    given-names: "Abel"
+  - family-names: "Singh"
+    given-names: "Amardeep"
+  - family-names: "Singh"
+    given-names: "Arjun"
+  - family-names: "Whitehead"
+    given-names: "Dion"
+date-released: 2025-03-26
+version: "1.0.0"
+repository-code: "https://github.com/klundquist/cd20-binder-design"
+license: "MIT"
+references:
+  - type: article
+    authors:
+      - family-names: "Watson"
+        given-names: "J.L."
+      - family-names: "Juergens"
+        given-names: "D."
+      - family-names: "Bennett"
+        given-names: "N.R."
+    title: "De novo design of protein structure and function with RFdiffusion"
+    journal: "Nature"
+    volume: 620
+    pages: 1089-1100
+    year: 2023
+    doi: "10.1038/s41586-023-06415-8"
+  - type: article
+    authors:
+      - family-names: "Bennett"
+        given-names: "N.R."
+      - family-names: "Coventry"
+        given-names: "B."
+      - family-names: "Goreshnik"
+        given-names: "I."
+    title: "Improving de novo protein binder design with deep learning"
+    journal: "Nature Communications"
+    volume: 14
+    issue: 2625
+    year: 2023
+    doi: "10.1038/s41467-023-38328-5"
+  - type: article
+    authors:
+      - family-names: "Jumper"
+        given-names: "J."
+      - family-names: "Evans"
+        given-names: "R."
+      - family-names: "Pritzel"
+        given-names: "A."
+    title: "Highly accurate protein structure prediction with AlphaFold"
+    journal: "Nature"
+    volume: 596
+    issue: 7873
+    pages: 583-589
+    year: 2021
+    doi: "10.1038/s41586-021-03819-2"
