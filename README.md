@@ -78,20 +78,21 @@ sudo systemctl restart docker
    from link: https://graylab.jhu.edu/download/PyRosetta4/archive/release/PyRosetta4.Release.python311.linux.cxx11thread.serialization.wheel/pyrosetta-2024.39+release.59628fb-cp311-cp311-linux_x86_64.whl
    place in /home/asus/biotools/cd20-binder-design/src/proteinmpnn_af2
    ```
-2. ```bash
+2. make python virtual env
+   ```bash
    cd /home/asus/biotools/cd20-binder-design
    source venv/bin/activate
-```
-3. Set up the environment:
+   ```
+4. Set up the environment:
    ```bash
    # Install RFDiffusion
    src/scripts/setup_rfdiffusion.sh
    
-   # Set up ProteinMPNN and AlphaFold2
+   # Install ProteinMPNN and AlphaFold2
    src/proteinmpnn_af2/setup.sh
    ```
-4. ```bash
-   Install some remaining dependencies:
+5. Install remaining dependencies:
+   ```bash
    pip install pandas matplotlib jupyter-lab mdanalysis biopython openmm nglview
    ```
 
