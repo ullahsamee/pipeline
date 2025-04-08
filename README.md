@@ -47,29 +47,52 @@ cd20-binder-design/
 └── README.md            # This file
 ```
 
-## Installation
+## Installation(Fedor 41) 
+
+
 
 ### Prerequisites
 
 - Docker (for containerized execution)
-- Python 3.8 or higher
-- CUDA-capable GPU (recommended for AlphaFold2 and RFDiffusion)
+- Python = 3.11 or 3.12.8
+- CUDA = 12.6 configured GPU (recommended for AlphaFold2 and RFDiffusion)
+- GCC = 14.2.1
+
+### Docker(NVIDIA Container Toolkit) setup
+ ```
+curl -s -L https://nvidia.github.io/libnvidia-container/stable/rpm/nvidia-container-toolkit.repo | \
+sudo tee /etc/yum.repos.d/nvidia-container-toolkit.repo
+sudo dnf install -y nvidia-container-toolkit
+
+sudo nvidia-ctk runtime configure --runtime=docker
+sudo systemctl restart docker
+   ```
 
 ### Setup
-
 1. Clone this repository:
    ```bash
    git clone https://github.com/klundquist/cd20-binder-design.git
    cd cd20-binder-design
-   ```
 
-2. Set up the environment:
+   Download pyrosetta-2024.39+release.59628fb-cp311-cp311-linux_x86_64.whl
+   from link: https://graylab.jhu.edu/download/PyRosetta4/archive/release/PyRosetta4.Release.python311.linux.cxx11thread.serialization.wheel/pyrosetta-2024.39+release.59628fb-cp311-cp311-linux_x86_64.whl
+   place in /home/asus/biotools/cd20-binder-design/src/proteinmpnn_af2
+   ```
+2. ```bash
+   cd /home/asus/biotools/cd20-binder-design
+   source venv/bin/activate
+```
+3. Set up the environment:
    ```bash
    # Install RFDiffusion
    src/scripts/setup_rfdiffusion.sh
    
    # Set up ProteinMPNN and AlphaFold2
    src/proteinmpnn_af2/setup.sh
+   ```
+4. ```bash
+   Install some remaining dependencies:
+   pip install pandas matplotlib jupyter-lab mdanalysis biopython openmm nglview
    ```
 
 ## Usage
