@@ -23,7 +23,7 @@ ENV PATH=/opt/conda/bin:$PATH
 COPY . .
 
 # Copy the PyRosetta wheel file (assumes it's in src/proteinmpnn_af2/ in the build context)
-COPY src/proteinmpnn_af2/pyrosetta-*.whl /tmp/pyrosetta.whl
+COPY src/proteinmpnn_af2/pyrosetta-*.whl /tmp/
 
 # Set up the conda environments using correct paths and names
 # IMPORTANT: Assumes the corresponding YML files have had '- pyrosetta' removed/commented out
@@ -31,17 +31,16 @@ RUN conda env create -f dl_binder_design/include/proteinmpnn_fastrelax.yml -n pr
 RUN conda env create -f dl_binder_design/include/af2_binder_design.yml -n af2_binder_design && conda clean -afy
 
 # Install PyRosetta from wheel file into the first environment
-# WARNING: Ensure this environment uses Python 3.10 for cp310 wheel compatibility
 RUN echo "Installing PyRosetta wheel in proteinmpnn_binder_design env..." && \
-    conda run -n proteinmpnn_binder_design pip install /tmp/pyrosetta.whl
+    conda run -n proteinmpnn_binder_design pip install /tmp/pyrosetta-*.whl
 
 # Install PyRosetta from wheel file into the second environment
 # WARNING: Ensure this environment uses Python 3.10 for cp310 wheel compatibility
 RUN echo "Installing PyRosetta wheel in af2_binder_design env..." && \
-    conda run -n af2_binder_design pip install /tmp/pyrosetta.whl
+    conda run -n af2_binder_design pip install /tmp/pyrosetta-*.whl
 
 # Clean up the wheel file after installation
-RUN rm /tmp/pyrosetta.whl
+RUN rm /tmp/pyrosetta-*.whl
 
 # Download AlphaFold2 model weights (Keep this section from original)
 # Note: This happens *inside* the image, making it large.
