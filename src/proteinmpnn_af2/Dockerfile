@@ -20,8 +20,8 @@ ENV PATH=/opt/conda/bin:$PATH
 COPY . .
 
 # Set up the conda environment for ProteinMPNN-FastRelax
-RUN conda env create -f include/proteinmpnn_fastrelax.yml -n proteinmpnn_binder_design && conda clean -afy
-RUN conda env create -f include/af2_binder_design.yml -n af2_binder_design && conda clean -afy
+RUN conda env create -f dl_binder_design/include/proteinmpnn_fastrelax.yml -n proteinmpnn_binder_design && conda clean -afy
+RUN conda env create -f dl_binder_design/include/af2_binder_design.yml -n af2_binder_design && conda clean -afy
 
 # Install PyRosetta using the installer
 RUN pip install pyrosetta-installer && \
