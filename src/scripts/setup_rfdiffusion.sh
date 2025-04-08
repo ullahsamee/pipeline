@@ -17,7 +17,7 @@ cd RFdiffusion
 echo "Modifying Dockerfile..."
 if ! grep -q "numpy==1.23.5" docker/Dockerfile; then
     # Add numpy version requirement to Dockerfile
-    sed -i '' 's/RUN pip install numpy/RUN pip install numpy==1.23.5/g' docker/Dockerfile
+    sed -i 's/RUN pip install numpy/RUN pip install numpy==1.23.5/g' docker/Dockerfile
     echo "Added numpy version requirement to Dockerfile"
 else
     echo "Dockerfile already modified, skipping."
